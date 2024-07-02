@@ -1,19 +1,19 @@
-*,
-*:before,
-*:after{
+/* Reset default padding, margin, and box-sizing for all elements */
+*, *:before, *:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins",sans-serif;
-    
+    font-family: "Poppins", sans-serif;
 }
 
-body{
+/* Set default body color and font */
+body {
     color: aliceblue;
     font-family: Questrial, sans-serif;
 }
 
-.navlist{
+/* Style the navigation list */
+.navlist {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -22,28 +22,31 @@ body{
     margin: 20px auto;
 }
 
-
+/* Style the individual navigation items */
 .navitem {
     background-color: black;
     border-radius: 5px;
-    padding:5px;
+    padding: 5px;
 }
 
-.navlist a{
+/* Style the links in the navigation items */
+.navlist a {
     text-decoration: none;
     color: rgb(250, 246, 240);
-
 }
 
-.navlist a:hover{
-    color: rgb(156, 108, 45)
+/* Change link color on hover */
+.navlist a:hover {
+    color: rgb(156, 108, 45);
 }
 
-
-.navlist:active{
-    color: rgb(176, 111, 25)
+/* Change link color on active state */
+.navlist:active {
+    color: rgb(176, 111, 25);
 }
-.main{
+
+/* Style the main container */
+.main {
     width: 70%;
     margin: 40px auto;
     height: 80vh;
@@ -52,14 +55,14 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     display: grid;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     font-size: 40px;
     font-weight: 500;
-    
 }
 
-.wrapper{
+/* Style the wrapper inside the main container */
+.wrapper {
     background-color: rgba(0,0,0, 0.5);
     box-sizing: content-box;
     height: 90px;
@@ -69,16 +72,16 @@ body{
     width: 100%;
 }
 
-
-.words{
+/* Style the words container inside the wrapper */
+.words {
     overflow: hidden;
     height: 100%;
     width: 90%;
-    margin: auto; 
+    margin: auto;
 }
 
-
-span{
+/* Style the spans inside the words container */
+span {
     display: block;
     height: 100%;
     padding-left: 10px;
@@ -88,91 +91,72 @@ span{
     animation-delay: 15s;
 }
 
-
-@keyframes spin_words{
-    10%{
+/* Keyframes for spinning words animation */
+@keyframes spin_words {
+    10% {
         transform: translateY(-120%);
     }
-    25%{
+    25% {
         transform: translateY(-100%);
     }
-    35%{
+    35% {
         transform: translateY(-212%);
     }
-    50%{
+    50% {
         transform: translateY(-200%);
     }
-    60%{
+    60% {
         transform: translateY(-312%);
     }
-    75%{
+    75% {
         transform: translateY(-300%);
     }
-    85%{
+    85% {
         transform: translateY(-412%);
     }
-    100%{
+    100% {
         transform: translateY(-580%);
     }
-} 
-
-
-
-@keyframes spins_words {
-    0% { transform: translateY(100%); }
-    10% { transform: translateY(0%); }
-    25% { transform: translateY(0%); }
-    35% { transform: translateY(-100%); }
-    100% { transform: translateY(-100%); }
 }
 
+/* Media Queries for responsive design */
 
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .main {
+        width: 90%;
+        font-size: 20px;
+    }
 
-/* 
-.wrapper {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-sizing: content-box;
-    height: 90px;
-    padding: 100px 0px;
-    border-radius: 8px;
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    overflow: hidden;
+    .navlist {
+        flex-direction: column;
+    }
+
+    .navitem {
+        margin-bottom: 10px;
+    }
 }
 
-.words {
-    height: 100%;
-    width: 90%;
-    margin: auto;
-    position: relative;
+/* Medium devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 768px) {
+    .main {
+        width: 80%;
+        font-size: 30px;
+    }
 }
 
-span {
-    display: block;
-    height: 100%;
-    padding-left: 10px;
-    padding-top: 10px;
-    color: #0e6ffc;
-    position: absolute;
-    width: 100%;
-    transform: translateY(100%);
-    animation: spin_words 21s infinite;
+/* Large devices (laptops/desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .main {
+        width: 75%;
+        font-size: 35px;
+    }
 }
 
-span:nth-child(1) { animation-delay: 0s; }
-span:nth-child(2) { animation-delay: 3s; }
-span:nth-child(3) { animation-delay: 6s; }
-span:nth-child(4) { animation-delay: 9s; }
-span:nth-child(5) { animation-delay: 12s; }
-span:nth-child(6) { animation-delay: 15s; }
-span:nth-child(7) { animation-delay: 18s; }
-
-@keyframes spins_words {
-    0% { transform: translateY(100%); }
-    10% { transform: translateY(0%); }
-    25% { transform: translateY(0%); }
-    35% { transform: translateY(-100%); }
-    100% { transform: translateY(-100%); }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .main {
+        width: 70%;
+        font-size: 40px;
+    }
 }
-
-*/
